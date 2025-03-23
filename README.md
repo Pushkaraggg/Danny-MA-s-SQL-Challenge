@@ -1,6 +1,7 @@
 # Danny-MA-s-SQL-Challenge
 
-####--1.What is the total amount each customer spent at the restaurant
+**1.What is the total amount each customer spent at the restaurant?
+'''sql
 CREATE VIEW details AS (SELECT m.product_id,customer_id AS total_cust,m.price,m.product_name
  FROM sales AS s
  INNER JOIN menu AS m
@@ -12,6 +13,7 @@ CREATE VIEW details AS (SELECT m.product_id,customer_id AS total_cust,m.price,m.
  FROM details
  GROUP BY total_cust
  ORDER BY total_cust;
+ '''
 
  
 
